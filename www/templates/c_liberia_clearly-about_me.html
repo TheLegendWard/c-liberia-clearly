@@ -1,0 +1,28 @@
+	<ion-view view-title="C Liberia Clearly" hide-nav-bar="false" >
+		<ion-nav-title>C Liberia Clearly</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-about_me" class=" page-about_me">
+					<!-- code refresh -->
+			<ion-refresher pulling-text="{{ 'Pull to refresh...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			<!-- code listing -->
+
+			<div class="list">
+				<div class="item item-text-wrap" ng-repeat="item in data_about_mes | limitTo:50:0"   >
+				<img ng-src="{{item.x_featured_media_medium}}" />	
+                  <h1 ng-bind-html="item.title.rendered | to_trusted"></h1>
+					
+					<div class="to_trusted {{ fontsize }}" ng-bind-html="item.content.rendered | strHTML"></div>
+				</div>
+			</div>
+
+			<!-- ./code listing -->
+
+
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

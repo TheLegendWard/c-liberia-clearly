@@ -1,0 +1,24 @@
+	<ion-view view-title="C Liberia Clearly" hide-nav-bar="false" >
+		<ion-nav-title>C Liberia Clearly</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"  scroll="true"   id="page-home_singles" class="page-home_singles">
+					<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+
+					<!-- heading-1 -->
+					<div class="item item-divider"  ng-bind-html="home.title | to_trusted">{{home.title}}</div>
+					<!-- ./heading-1 -->
+
+					<!-- to_trusted -->
+					<div class="item itemtext item-text-wrap noborder to_trusted {{ fontsize }}" ng-bind-html="home.content | strHTML"></div>
+					<!-- ./to_trusted -->
+
+				
+
+					
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

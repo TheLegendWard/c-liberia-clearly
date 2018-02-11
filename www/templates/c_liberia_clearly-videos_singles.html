@@ -1,0 +1,23 @@
+	<ion-view view-title="Videos" hide-nav-bar="false" >
+		<ion-nav-title>Videos</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-videos_singles" class="page-videos_singles">
+					<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+
+					<!-- id -->
+					<!-- ./id -->
+
+					<!-- ytube -->
+					<div class="item noborder"><div class="embed_container"><iframe width="100%" ng-src="{{ 'https://www.youtube.com/embed/' + videos.snippet.resourceId.videoId | trustUrl }}" frameborder="0" allowfullscreen></iframe></div></div>
+					<!-- ./ytube -->
+              
+              <!-- heading-1 -->
+					<div class="item item-divider"  ng-bind-html="videos.snippet.title | to_trusted">{{videos.snippet.title}}</div>
+					<!-- ./heading-1 -->
+			</div>
+			<br/><br/><br/>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

@@ -1,0 +1,28 @@
+	<ion-view view-title="Bookmarks of Top News" hide-nav-bar="false" >
+		<ion-nav-title>Bookmarks of Top News</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"  scroll="true"   id="page-home_bookmark" class="page-home_bookmark">
+		
+
+
+		<ion-list class="list" ng-if="home_bookmark.length != 0">
+			<ion-item class="item item-icon-left" type="item-avatar" ng-repeat="item in home_bookmark" ng-href="#/c_liberia_clearly/home_singles/{{ item.id }}">
+				<i class="icon ion-ios-bookmarks-outline"></i>
+				<h2 class="" ng-bind-html="item.title | to_trusted"></h2>
+				<ion-option-button class="assertive-bg" ng-click="removeDbVirtualHome(item.id)"><i class="icon ion-trash-a"></i></ion-option-button>
+			</ion-item>					<ion-item class="item item-button">
+						<button class="button button-small button-calm" ng-click="clearDbVirtualHome();"><i class="icon ion-ios-refresh-outline"></i> {{ 'Clear' | translate }}</button>
+					</ion-item>
+
+		</ion-list>
+
+
+		<!-- no product -->
+		<div class="home_bookmark padding text-center" ng-if="home_bookmark.length == 0">
+			<i class="icon ion-ios-bookmarks-outline"></i>		<p>{{ 'There are no items' | translate }}</p>
+
+		</div>
+		<!-- no product -->
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

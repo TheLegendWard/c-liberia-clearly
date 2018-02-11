@@ -1,0 +1,49 @@
+	<ion-view view-title="Videos" hide-nav-bar="false" >
+		<ion-nav-title>Videos</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"  scroll="true"   id="page-videos" class=" page-videos">
+					<!-- code refresh -->
+			<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			
+
+
+			<!-- code listing -->
+						<div class="list animate-none">
+							<div class="list card list card postlist" ng-repeat="item in videoss | filter:filter_videoss as results" ng-init="$last ? fireEvent() : null" href="#/c_liberia_clearly/videos_singles/{{item.snippet.resourceId.videoId}}" >
+								 <a class="item" href="#/c_liberia_clearly/videos_singles/{{item.snippet.resourceId.videoId}}">
+								
+									<img class="full-image" ng-src="{{item.snippet.thumbnails.high.url}}" />
+			                      
+			         <div class="vidarrow"><i class="positive icon ion-play"></i></div>
+			                 <h2 ng-bind-html="item.snippet.title | to_trusted"></h2>
+			                    
+			                  </a>
+								
+							</div>
+			               
+						</div>
+						<!-- ./code listing -->
+			<!-- code infinite scroll -->
+			<ion-list class="list">
+				<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
+			</ion-list>
+			<!-- ./code infinite scroll -->
+
+
+			<!-- code search result not found -->
+			<ion-list class="list">
+				<div class="item" ng-if="results.length == 0" >
+					<p>No results found...!</p>
+				</div>
+			</ion-list>
+			<!-- code search result not found -->
+
+
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

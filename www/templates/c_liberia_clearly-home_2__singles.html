@@ -1,0 +1,46 @@
+	<ion-view view-title="{{ home_2_.title }}" hide-nav-bar="false" >
+		<ion-nav-title>{{ home_2_.title }}</ion-nav-title>
+		<!-- content -->
+		<ion-content delegate-handle="top"  scroll="true"   id="page-home_2__singles" class="page-home_2__singles">
+		
+    
+<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+
+<div class="list">
+
+    <div class="item item-avatar">
+        <img alt="" ng-src="{{home_2_.author.image.url}}" />
+        <h2 ng-bind-html="home_2_.title | to_trusted"></h2>
+        <p> {{ home_2_.updated | strDate | date:'fullDate' }}</p>		
+	</div>
+
+    
+    <div class="item item-text-wrap noborder to_trusted" ng-bind-html="home_2_.content | strHTML"></div>
+    <div class="item noborder">
+        by <strong ng-bind-html="home_2_.author.displayName | strHTML"></strong>
+    </div>
+    
+</div>
+ 
+<div class="list card">
+	<div class="item tabs tabs-secondary tabs-icon-left tabs-stable">
+        <a class="tab-item" run-social-sharing message="{{home_2_.url}}"><i class="icon ion-android-share-alt"></i> Share This Link</a>
+    </div>
+</div>    
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
+		<!-- button_up -->
+		<div class="" style="bottom:44px;position: absolute;left: 0px;right: 0px;">
+			<button id="c_liberia_clearly-home_2__singles_up_button" ng-click="scrollTop()" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-arrow-up-a"></i></button>
+		</div>
+		<!-- ./button_up -->
