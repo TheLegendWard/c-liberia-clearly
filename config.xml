@@ -62,6 +62,7 @@
 		<param name="ios-package" onload="true" value="CDVStatusBar"/>
 	</feature>
 	<!-- default -->
+	
 	<plugin name="cordova-plugin-device" />
 	<plugin name="cordova-plugin-console" />
 	<plugin name="cordova-plugin-whitelist" />
@@ -69,6 +70,7 @@
 	<plugin name="cordova-plugin-statusbar" />
 	<plugin name="ionic-plugin-keyboard" />
 	<!-- ./default -->
+	<plugin name="cordova-plugin-x-socialsharing" />
 	<plugin name="cordova-plugin-dialogs" />
 	<plugin name="cordova-plugin-inappbrowser" />
 	<plugin name="onesignal-cordova-plugin" />
