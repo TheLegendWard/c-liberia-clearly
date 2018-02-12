@@ -347,6 +347,10 @@ a {
     margin-left: -16px;
 }
 
+.tabs {background-color: #1a1a1a;;
+    background-image:none;
+  border-color: #111;}
+.
 
 .tabs-background-dark .tabs, .tabs-background-dark > .tabs {
     background-color: #1a1a1a;;
@@ -354,9 +358,11 @@ a {
   border-color: #111;}
 
 .tabs-color-stable .tab-item.activated, .tabs-color-stable .tab-item.active, .tabs-color-stable .tab-item.tab-item-active {
-    color: #ff7357;
+    color: #ff7357!important;
     border: 0 solid #f8f8f8;
 }
+
+
 .dateshare {border-bottom: 0px solid #fff;
 padding-top: 0px;
 margin-top: -24px;
