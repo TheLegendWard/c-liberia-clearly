@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.imabuilder.cliberiaclearly.cliberiaclearly" version="1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.imabuilder.cliberiaclearly.cliberiaclearly" version="1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 	<name>C LIBERIA CLEARLY</name>
 	<description>C LIBERIA CLEARLY is an entertainment website and blog that primarily publish news about Liberian celebrities.</description>
 	<author email="cliberiaclearly@gmail.com" href="http://www.cliberiaclearly.net/">Berenice Mulubah</author>
@@ -46,7 +46,7 @@
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="SplashScreenDelay" value="2000"/>
 	<preference name="FadeSplashScreenDuration" value="0"/>
-	<preference name="android-minSdkVersion" value="16"/>
+	<preference name="android-minSdkVersion" value="23"/>
 	<preference name="BackupWebStorage" value="none"/>
 	<preference name="SplashScreen" value="screen"/>
 	<preference name="Orientation" value="default"/>
