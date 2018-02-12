@@ -454,3 +454,5 @@ display: block;}
 .tabs-color-stable .tab-item.activated, .tabs-color-stable .tab-item.active, .tabs-color-stable .tab-item.tab-item-active {
     color: #ff7357;
 }
+
+.ink-ripple {background-color:transparent !important;}
