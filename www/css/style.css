@@ -234,19 +234,11 @@ ul.rating li i{color:#FFCC00}
 /** menu **/
 
 /** option page **/
-#page-dashboard{background: url("../data/images/background/bg7.jpg") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 #page-home_2__singles{background: url("../data/images/background/transparent.png") no-repeat left top fixed;background-size: cover;width:100%;height:100%;background-repeat:no-repeat;}
 /** page contact_information **/
 .contact_information-box{background-color: rgba(255, 255, 255, 0.5);}.contact_information-box .item{border-color: rgba(255, 255, 255, 0.5);border-left:0;border-right:0;}
 /** page contact_us **/
 .contact_us-box{background-color: rgba(255, 255, 255, 0.5);}.contact_us-box .item{border-color: rgba(255, 255, 255, 0.5);border-left:0;border-right:0;}
-/** page dashboard **/
-
-.dashboard-panel .row .col-33 {text-decoration-line: unset;text-align: center;padding: 22px 20px 10px 20px;border:0;}
-.dashboard-panel .row .col-33 i {font-size: 28px;margin-bottom: 2px;}
-.dashboard-panel a:link, .dashboard-panel a:visited{text-decoration: none;}
-.dashboard-panel .row .col-33 p {font-size: 12px;font-weight:500;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}             
-            
 /** page home_bookmark **/
 .home_bookmark{margin-top: 50%;}
 .home_bookmark .icon:before{font-size:72px;font-weight: 600;}
@@ -309,6 +301,7 @@ a {
     height: auto;
     line-height: 1.3em;
     color:#fff;
+  margin-top:16px;
 }
 
 .card, .list-inset {
@@ -444,3 +437,7 @@ margin-bottom: 5px;}
     color: #387ef5;
 }
 
+.subdued {color:#ff7357; font-size:10px; padding-left:16px; padding-right:16px; margin-bottom: 15px;
+display: block;}
+
+#page-home .subdued {padding-left:5px; padding-right:0px;}

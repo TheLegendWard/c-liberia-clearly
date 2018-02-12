@@ -171,9 +171,9 @@ angular.module("c_liberia_clearly.controllers", [])
 					for(var e = 0; e < keys.length ; e++) {
 						localforage.setItem(keys[e],[]);
 					}
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				}).catch(function(err) {
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				});
 			}
 			$rootScope.closeMenuPopover();
@@ -374,7 +374,7 @@ angular.module("c_liberia_clearly.controllers", [])
 			scope: $scope,
 			buttons: [
 				{text:"Cancel",onTap: function(e){
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				}},
 			],
 		}).then(function(form){
@@ -970,114 +970,6 @@ $ionicConfig.backButton.text("");
 	controller_by_user();
 })
 
-// TODO: dashboardCtrl --|-- 
-.controller("dashboardCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate,tmhDynamicLocale){
-	
-	$rootScope.headerExists = true;
-	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
-	$rootScope.grid64 = parseInt($rootScope.ionWidth / 64) ;
-	$rootScope.grid80 = parseInt($rootScope.ionWidth / 80) ;
-	$rootScope.grid128 = parseInt($rootScope.ionWidth / 128) ;
-	$rootScope.grid256 = parseInt($rootScope.ionWidth / 256) ;
-	$rootScope.last_edit = "menu" ;
-	$scope.$on("$ionicView.afterEnter", function (){
-		var page_id = $state.current.name ;
-		$rootScope.page_id = page_id.replace(".","-") ;
-	});
-	if($rootScope.headerShrink == true){
-		$scope.$on("$ionicView.enter", function(){
-			$scope.scrollTop();
-		});
-	};
-	// TODO: dashboardCtrl --|-- $scope.scrollTop
-	$rootScope.scrollTop = function(){
-		$timeout(function(){
-			$ionicScrollDelegate.$getByHandle("top").scrollTop();
-		},100);
-	};
-	// TODO: dashboardCtrl --|-- $scope.openURL
-	// open external browser 
-	$scope.openURL = function($url){
-		window.open($url,"_system","location=yes");
-	};
-	// TODO: dashboardCtrl --|-- $scope.openAppBrowser
-	// open AppBrowser
-	$scope.openAppBrowser = function($url){
-		var appBrowser = window.open($url,"_blank","hardwareback=Done");
-		appBrowser.addEventListener("loadstart",function(){
-			appBrowser.insertCSS({
-				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
-			});
-		});
-	
-		appWebview.addEventListener("loaderror",function(){
-			window.location = "retry.html";
-		});
-	};
-	
-	
-	// TODO: dashboardCtrl --|-- $scope.openWebView
-	// open WebView
-	$scope.openWebView = function($url){
-		var appWebview = window.open($url,"_blank","location=no");
-		appWebview.addEventListener("loadstart",function(){
-			appWebview.insertCSS({
-				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
-			});
-		});
-	
-		appWebview.addEventListener("loaderror",function(){
-			window.location = "retry.html";
-		});
-	};
-	
-	
-	// TODO: dashboardCtrl --|-- $scope.toggleGroup
-	$scope.toggleGroup = function(group) {
-		if ($scope.isGroupShown(group)) {
-			$scope.shownGroup = null;
-		} else {
-			$scope.shownGroup = group;
-		}
-	};
-	
-	$scope.isGroupShown = function(group) {
-		return $scope.shownGroup === group;
-	};
-	
-	// TODO: dashboardCtrl --|-- $scope.redirect
-	// redirect
-	$scope.redirect = function($url){
-		$window.location.href = $url;
-	};
-	
-	// Set Motion
-	$timeout(function(){
-		ionicMaterialMotion.slideUp({
-			selector: ".slide-up"
-		});
-	}, 300);
-	// code 
-
-	// TODO: dashboardCtrl --|-- controller_by_user
-	// controller by user 
-	function controller_by_user(){
-		try {
-			
-$ionicConfig.backButton.text("");			
-		} catch(e){
-			console.log("%cerror: %cPage: `dashboard` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
-			console.dir(e);
-		}
-	}
-	$scope.rating = {};
-	$scope.rating.max = 5;
-	
-	// animation ink (ionic-material)
-	ionicMaterialInk.displayEffect();
-	controller_by_user();
-})
-
 // TODO: homeCtrl --|-- 
 .controller("homeCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate,tmhDynamicLocale){
 	
@@ -1174,7 +1066,7 @@ $ionicConfig.backButton.text("");
 			scope: $scope,
 			buttons: [
 				{text:"Cancel",onTap: function(e){
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				}},
 			],
 		}).then(function(form){
@@ -1858,7 +1750,7 @@ $ionicConfig.backButton.text("");
 			scope: $scope,
 			buttons: [
 				{text:"Cancel",onTap: function(e){
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				}},
 			],
 		}).then(function(form){
@@ -2277,7 +2169,7 @@ $ionicConfig.backButton.text("");
 			scope: $scope,
 			buttons: [
 				{text:"Cancel",onTap: function(e){
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				}},
 			],
 		}).then(function(form){
@@ -2652,7 +2544,7 @@ $ionicConfig.backButton.text("");
 			scope: $scope,
 			buttons: [
 				{text:"Cancel",onTap: function(e){
-					$state.go("c_liberia_clearly.dashboard");
+					$state.go("c_liberia_clearly.home");
 				}},
 			],
 		}).then(function(form){

@@ -218,19 +218,6 @@ angular.module("c_liberia_clearly", ["ngCordova","ionic","ionMdInput","ionic-mat
 		}
 	})
 
-	.state("c_liberia_clearly.dashboard", {
-		url: "/dashboard",
-		views: {
-			"c_liberia_clearly-dashboard" : {
-						templateUrl:"templates/c_liberia_clearly-dashboard.html",
-						controller: "dashboardCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
 	.state("c_liberia_clearly.home", {
 		url: "/home",
 		cache:false,
@@ -347,5 +334,5 @@ angular.module("c_liberia_clearly", ["ngCordova","ionic","ionMdInput","ionic-mat
 // router by user
 
 
-	$urlRouterProvider.otherwise("/c_liberia_clearly/dashboard");
+	$urlRouterProvider.otherwise("/c_liberia_clearly/home");
 });
